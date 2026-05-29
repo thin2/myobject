@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+venv/
+env/
+
+# Django
+db.sqlite3
+*.log
+media/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude
+.claude/
