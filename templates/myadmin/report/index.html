@@ -1,0 +1,94 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>经营报表</h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li class="active">经营报表</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-aqua">
+        <div class="inner">
+          <h3>{{ total_clients }}</h3>
+          <p>活跃客户数</p>
+        </div>
+        <div class="icon"><i class="fa fa-building"></i></div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-green">
+        <div class="inner">
+          <h3>{{ total_employees }}</h3>
+          <p>在职会计数</p>
+        </div>
+        <div class="icon"><i class="fa fa-users"></i></div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-yellow">
+        <div class="inner">
+          <h3>{{ overdue_count }}</h3>
+          <p>欠费记录数</p>
+        </div>
+        <div class="icon"><i class="fa fa-warning"></i></div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-{% if month_profit >= 0 %}green{% else %}red{% endif %}">
+        <div class="inner">
+          <h3>{{ month_profit }} 元</h3>
+          <p>本月收益</p>
+        </div>
+        <div class="icon"><i class="fa fa-line-chart"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">本月概况</h3>
+        </div>
+        <div class="box-body">
+          <table class="table">
+            <tr><th>本月收入（客户缴费）</th><td class="text-green"><strong>{{ month_income }} 元</strong></td></tr>
+            <tr><th>本月支出（员工薪酬）</th><td class="text-red"><strong>{{ month_expense }} 元</strong></td></tr>
+            <tr><th>本月收益</th><td><strong>{{ month_profit }} 元</strong></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">近6个月收支统计</h3>
+        </div>
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>月份</th>
+              <th>收入</th>
+              <th>支出</th>
+              <th>收益</th>
+            </tr>
+            {% for m in recent_months %}
+            <tr>
+              <td>{{ m.month }}</td>
+              <td class="text-green">{{ m.income }} 元</td>
+              <td class="text-red">{{ m.expense }} 元</td>
+              <td><strong class="{% if m.profit >= 0 %}text-green{% else %}text-red{% endif %}">{{ m.profit }} 元</strong></td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

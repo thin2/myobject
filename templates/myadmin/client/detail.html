@@ -1,0 +1,101 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>客户详情 <small>{{ client.name }}</small></h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li><a href="{% url 'myadmin_client_index' 1 %}">客户管理</a></li>
+    <li class="active">客户详情</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">基本信息</h3>
+        </div>
+        <div class="box-body">
+          <table class="table">
+            <tr><th width="120">客户编号</th><td>{{ client.client_no }}</td></tr>
+            <tr><th>企业名称</th><td>{{ client.name }}</td></tr>
+            <tr><th>企业性质</th><td>{{ client.get_nature_display }}</td></tr>
+            <tr><th>经营范围</th><td>{{ client.business_scope|default:"-" }}</td></tr>
+            <tr><th>法人代表</th><td>{{ client.legal_person|default:"-" }}</td></tr>
+            <tr><th>联系人</th><td>{{ client.contact_name }}</td></tr>
+            <tr><th>联系电话</th><td>{{ client.contact_phone }}</td></tr>
+            <tr><th>地址</th><td>{{ client.address|default:"-" }}</td></tr>
+            <tr><th>对接会计</th><td>{{ client.accountant.first_name|default:"未分配" }}</td></tr>
+            <tr><th>状态</th><td>{% if client.status == 1 %}<span class="label label-success">正常</span>{% else %}<span class="label label-warning">停用</span>{% endif %}</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">缴费信息</h3>
+        </div>
+        <div class="box-body">
+          <table class="table">
+            <tr><th width="120">缴费开始日期</th><td>{{ client.fee_start_date|date:"Y-m-d"|default:"-" }}</td></tr>
+            <tr><th>缴费周期</th><td>{{ client.get_fee_cycle_display }}</td></tr>
+            <tr><th>缴费金额</th><td>{{ client.fee_amount }} 元</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-warning">
+        <div class="box-header with-border">
+          <h3 class="box-title">缴费记录</h3>
+          {% if request.user.role != 'accountant' %}
+          <div class="box-tools">
+            <a href="{% url 'myadmin_fee_add' client.id %}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> 添加缴费记录</a>
+          </div>
+          {% endif %}
+        </div>
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>应收日期</th>
+              <th>应收金额</th>
+              <th>实收日期</th>
+              <th>实收金额</th>
+              <th>状态</th>
+              <th>备注</th>
+            </tr>
+            {% for fee in fees %}
+            <tr>
+              <td>{{ fee.due_date|date:"Y-m-d" }}</td>
+              <td>{{ fee.due_amount }} 元</td>
+              <td>{{ fee.paid_date|date:"Y-m-d"|default:"-" }}</td>
+              <td>{{ fee.paid_amount }} 元</td>
+              <td>
+                {% if fee.status == 0 %}<span class="label label-default">待缴</span>
+                {% elif fee.status == 1 %}<span class="label label-success">已缴</span>
+                {% else %}<span class="label label-danger">欠费</span>{% endif %}
+              </td>
+              <td>{{ fee.remark|default:"-" }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="6" class="text-center">暂无缴费记录</td></tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="{% url 'myadmin_client_index' 1 %}" class="btn btn-default"><i class="fa fa-arrow-left"></i> 返回列表</a>
+  {% if request.user.role != 'accountant' %}
+  <a href="{% url 'myadmin_client_edit' client.id %}" class="btn btn-success"><i class="fa fa-edit"></i> 编辑</a>
+  <a href="{% url 'myadmin_client_assign' client.id %}" class="btn btn-warning"><i class="fa fa-user-plus"></i> 分配会计</a>
+  {% endif %}
+</section>
+{% endblock %}

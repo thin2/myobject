@@ -1,0 +1,38 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>客户分配 <small>{{ client.name }}</small></h1>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">分配对接会计</h3>
+        </div>
+        <form action="{% url 'myadmin_client_assign' client.id %}" method="post">
+          {% csrf_token %}
+          <div class="box-body">
+            <p>当前对接会计：<strong>{{ client.accountant.first_name|default:"未分配" }}</strong></p>
+            <div class="form-group">
+              <label>选择会计</label>
+              <select name="accountant" class="form-control">
+                <option value="">--取消分配--</option>
+                {% for acc in accountants %}
+                <option value="{{ acc.id }}" {% if client.accountant_id == acc.id %}selected{% endif %}>{{ acc.first_name }}（{{ acc.username }}）</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">确认分配</button>
+            <a href="{% url 'myadmin_client_detail' client.id %}" class="btn btn-default">返回</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

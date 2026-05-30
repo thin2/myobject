@@ -1,0 +1,2702 @@
+[
+{
+  "model": "myadmin.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$F3duZ22xTUAxXN1GEAb4hl$3E1BgpPwglG83hE12kk4N6/QCrcXPYVPjg6qhE3Q/FY=",
+    "last_login": "2026-05-30T07:01:51.720Z",
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "管理员",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T05:11:01.894Z",
+    "role": "admin",
+    "phone": "",
+    "gender": "",
+    "age": null,
+    "education": "",
+    "major": "",
+    "certificate": "none",
+    "work_years": 0,
+    "hire_date": null,
+    "status": 1,
+    "create_at": "2026-05-30T05:11:02.053Z",
+    "update_at": "2026-05-30T05:11:02.053Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$a3zrIV092G5cwm0nSHUB6s$4KWpA2+5oCvWDCsn6INdB1kBJ4qB+gRQNwLfJWbJ2Lw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "zhuguan",
+    "first_name": "张主管",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T05:11:02.056Z",
+    "role": "supervisor",
+    "phone": "",
+    "gender": "",
+    "age": null,
+    "education": "",
+    "major": "",
+    "certificate": "none",
+    "work_years": 0,
+    "hire_date": null,
+    "status": 1,
+    "create_at": "2026-05-30T05:11:02.217Z",
+    "update_at": "2026-05-30T05:11:02.217Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$yo9zun4w1UT5SkeMLzouYi$Kr5szuY8mzRhHnseY8Dk/h9AvvKleA2qXYyc14wK6/M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kuaiji",
+    "first_name": "李会计",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T05:11:02.218Z",
+    "role": "accountant",
+    "phone": "",
+    "gender": "",
+    "age": null,
+    "education": "",
+    "major": "",
+    "certificate": "none",
+    "work_years": 0,
+    "hire_date": null,
+    "status": 1,
+    "create_at": "2026-05-30T05:11:02.374Z",
+    "update_at": "2026-05-30T05:11:02.374Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$VEY3cSocqKUogG2eukuXDY$GnOqcmdSZUpOU372SCu17J5SaB64/ekWXSxaAWmhilc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lihua",
+    "first_name": "李华",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T07:52:36.908Z",
+    "role": "accountant",
+    "phone": "13800138001",
+    "gender": "female",
+    "age": 28,
+    "education": "bachelor",
+    "major": "会计学",
+    "certificate": "intermediate",
+    "work_years": 5,
+    "hire_date": "2021-03-15",
+    "status": 1,
+    "create_at": "2026-05-30T07:52:36.909Z",
+    "update_at": "2026-05-30T07:52:37.059Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$dhYkylb6Oga84hJd11rUYz$LCA/aTcqEa62YIghSRQhqyYWrmb29AnA3b4Cegd7Vmo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "wangfang",
+    "first_name": "王芳",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T07:52:37.065Z",
+    "role": "accountant",
+    "phone": "13800138002",
+    "gender": "female",
+    "age": 32,
+    "education": "bachelor",
+    "major": "财务管理",
+    "certificate": "senior",
+    "work_years": 8,
+    "hire_date": "2019-07-01",
+    "status": 1,
+    "create_at": "2026-05-30T07:52:37.065Z",
+    "update_at": "2026-05-30T07:52:37.219Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$khDrzimAeIcLmDRNZiyGRV$6QV6ViNEmW46Zv6NDVvabcrDdz7Llk3hJC5yHZghJFU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "zhangwei",
+    "first_name": "张伟",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T07:52:37.221Z",
+    "role": "accountant",
+    "phone": "13800138003",
+    "gender": "male",
+    "age": 26,
+    "education": "bachelor",
+    "major": "审计学",
+    "certificate": "accounting",
+    "work_years": 3,
+    "hire_date": "2023-02-20",
+    "status": 1,
+    "create_at": "2026-05-30T07:52:37.222Z",
+    "update_at": "2026-05-30T07:52:37.371Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5kptn1uvtz0cuirwGiaeVt$9rpURv5Hz23LAq50z13z0KtlqnbNXItsNW7IwgX9514=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "chenli",
+    "first_name": "陈丽",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T07:52:37.373Z",
+    "role": "accountant",
+    "phone": "13800138004",
+    "gender": "female",
+    "age": 35,
+    "education": "master",
+    "major": "会计学",
+    "certificate": "senior",
+    "work_years": 12,
+    "hire_date": "2018-05-10",
+    "status": 1,
+    "create_at": "2026-05-30T07:52:37.374Z",
+    "update_at": "2026-05-30T07:52:37.531Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$rWTRevBiKotq2bRGTkdFZA$NtS+jRxnH/+ra4veEQ09Iv5WXvMycI60ZIYy2dz7tFw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "liuyang",
+    "first_name": "刘洋",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-30T07:52:37.532Z",
+    "role": "accountant",
+    "phone": "13800138005",
+    "gender": "male",
+    "age": 29,
+    "education": "bachelor",
+    "major": "财务管理",
+    "certificate": "intermediate",
+    "work_years": 4,
+    "hire_date": "2022-08-01",
+    "status": 1,
+    "create_at": "2026-05-30T07:52:37.532Z",
+    "update_at": "2026-05-30T07:52:37.683Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 1,
+  "fields": {
+    "client_no": "KH20210001",
+    "name": "杭州星辰科技有限公司",
+    "nature": "general",
+    "business_scope": "软件开发、技术咨询",
+    "legal_person": "赵明",
+    "contact_name": "赵明",
+    "contact_phone": "15800001001",
+    "address": "杭州市西湖区文三路100号",
+    "fee_start_date": "2021-04-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "800.00",
+    "status": 1,
+    "accountant": 3,
+    "create_at": "2026-05-30T08:47:33.386Z",
+    "update_at": "2026-05-30T08:47:33.386Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 2,
+  "fields": {
+    "client_no": "KH20210002",
+    "name": "杭州绿源环保科技有限公司",
+    "nature": "general",
+    "business_scope": "环保设备研发、销售",
+    "legal_person": "孙强",
+    "contact_name": "孙强",
+    "contact_phone": "15800001002",
+    "address": "杭州市滨江区江南大道200号",
+    "fee_start_date": "2021-06-01",
+    "fee_cycle": "quarterly",
+    "fee_amount": "2000.00",
+    "status": 1,
+    "accountant": 4,
+    "create_at": "2026-05-30T08:47:33.387Z",
+    "update_at": "2026-05-30T08:47:33.387Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 3,
+  "fields": {
+    "client_no": "KH20220001",
+    "name": "余杭鑫达贸易有限公司",
+    "nature": "small",
+    "business_scope": "日用品批发零售",
+    "legal_person": "周丽",
+    "contact_name": "周丽",
+    "contact_phone": "15800001003",
+    "address": "杭州市余杭区临平大道50号",
+    "fee_start_date": "2022-01-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "400.00",
+    "status": 1,
+    "accountant": 5,
+    "create_at": "2026-05-30T08:47:33.389Z",
+    "update_at": "2026-05-30T08:47:33.389Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 4,
+  "fields": {
+    "client_no": "KH20220002",
+    "name": "杭州味道餐饮管理有限公司",
+    "nature": "small",
+    "business_scope": "餐饮服务、食品配送",
+    "legal_person": "钱伟",
+    "contact_name": "钱伟",
+    "contact_phone": "15800001004",
+    "address": "杭州市上城区解放路88号",
+    "fee_start_date": "2022-03-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "500.00",
+    "status": 1,
+    "accountant": 6,
+    "create_at": "2026-05-30T08:47:33.390Z",
+    "update_at": "2026-05-30T08:47:33.390Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 5,
+  "fields": {
+    "client_no": "KH20220003",
+    "name": "浙江宏图建设工程有限公司",
+    "nature": "general",
+    "business_scope": "建筑工程施工、装饰装修",
+    "legal_person": "吴刚",
+    "contact_name": "马秀英",
+    "contact_phone": "15800001005",
+    "address": "杭州市拱墅区莫干山路300号",
+    "fee_start_date": "2022-05-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "1200.00",
+    "status": 1,
+    "accountant": 7,
+    "create_at": "2026-05-30T08:47:33.391Z",
+    "update_at": "2026-05-30T08:47:33.391Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 6,
+  "fields": {
+    "client_no": "KH20230001",
+    "name": "萧山瑞丰电子商务有限公司",
+    "nature": "small",
+    "business_scope": "电子商务、网络销售",
+    "legal_person": "郑涛",
+    "contact_name": "郑涛",
+    "contact_phone": "15800001006",
+    "address": "杭州市萧山区市心路400号",
+    "fee_start_date": "2023-01-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "350.00",
+    "status": 1,
+    "accountant": 8,
+    "create_at": "2026-05-30T08:47:33.392Z",
+    "update_at": "2026-05-30T08:47:33.392Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 7,
+  "fields": {
+    "client_no": "KH20230002",
+    "name": "杭州智云数据服务有限公司",
+    "nature": "general",
+    "business_scope": "数据处理、信息技术服务",
+    "legal_person": "林伟",
+    "contact_name": "林伟",
+    "contact_phone": "15800001007",
+    "address": "杭州市滨江区网商路500号",
+    "fee_start_date": "2023-04-01",
+    "fee_cycle": "quarterly",
+    "fee_amount": "2500.00",
+    "status": 1,
+    "accountant": 3,
+    "create_at": "2026-05-30T08:47:33.393Z",
+    "update_at": "2026-05-30T08:47:33.393Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 8,
+  "fields": {
+    "client_no": "KH20230003",
+    "name": "杭州优学教育培训有限公司",
+    "nature": "small",
+    "business_scope": "教育培训、课程研发",
+    "legal_person": "许敏",
+    "contact_name": "许敏",
+    "contact_phone": "15800001008",
+    "address": "杭州市西湖区教工路60号",
+    "fee_start_date": "2023-07-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "400.00",
+    "status": 1,
+    "accountant": 4,
+    "create_at": "2026-05-30T08:47:33.394Z",
+    "update_at": "2026-05-30T08:47:33.394Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 9,
+  "fields": {
+    "client_no": "KH20240001",
+    "name": "富阳恒信物流有限公司",
+    "nature": "small",
+    "business_scope": "货物运输、仓储服务",
+    "legal_person": "何斌",
+    "contact_name": "何斌",
+    "contact_phone": "15800001009",
+    "address": "杭州市富阳区富春路700号",
+    "fee_start_date": "2024-02-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "450.00",
+    "status": 1,
+    "accountant": 5,
+    "create_at": "2026-05-30T08:47:33.395Z",
+    "update_at": "2026-05-30T08:47:33.395Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 10,
+  "fields": {
+    "client_no": "KH20240002",
+    "name": "杭州创美广告设计有限公司",
+    "nature": "small",
+    "business_scope": "广告设计、品牌策划",
+    "legal_person": "冯丹",
+    "contact_name": "冯丹",
+    "contact_phone": "15800001010",
+    "address": "杭州市下城区朝晖路150号",
+    "fee_start_date": "2024-05-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "350.00",
+    "status": 1,
+    "accountant": 6,
+    "create_at": "2026-05-30T08:47:33.396Z",
+    "update_at": "2026-05-30T08:47:33.396Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 11,
+  "fields": {
+    "client_no": "KH20250001",
+    "name": "杭州盛达机械制造有限公司",
+    "nature": "general",
+    "business_scope": "机械设备制造、加工",
+    "legal_person": "黄强",
+    "contact_name": "黄强",
+    "contact_phone": "15800001011",
+    "address": "杭州市临平区工业园区18号",
+    "fee_start_date": "2025-01-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "1000.00",
+    "status": 1,
+    "accountant": 7,
+    "create_at": "2026-05-30T08:47:33.397Z",
+    "update_at": "2026-05-30T08:47:33.397Z"
+  }
+},
+{
+  "model": "myadmin.client",
+  "pk": 12,
+  "fields": {
+    "client_no": "KH20250002",
+    "name": "杭州悦然健康管理有限公司",
+    "nature": "small",
+    "business_scope": "健康咨询、养生服务",
+    "legal_person": "田芳",
+    "contact_name": "田芳",
+    "contact_phone": "15800001012",
+    "address": "杭州市江干区凯旋路80号",
+    "fee_start_date": "2025-03-01",
+    "fee_cycle": "monthly",
+    "fee_amount": "300.00",
+    "status": 1,
+    "accountant": 8,
+    "create_at": "2026-05-30T08:47:33.398Z",
+    "update_at": "2026-05-30T08:47:33.398Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 1,
+  "fields": {
+    "client": 1,
+    "due_date": "2026-05-01",
+    "due_amount": "800.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.593Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 2,
+  "fields": {
+    "client": 1,
+    "due_date": "2026-04-01",
+    "due_amount": "800.00",
+    "paid_date": "2026-04-17",
+    "paid_amount": "800.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.594Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 3,
+  "fields": {
+    "client": 1,
+    "due_date": "2026-03-01",
+    "due_amount": "800.00",
+    "paid_date": "2026-03-02",
+    "paid_amount": "800.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.595Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 4,
+  "fields": {
+    "client": 1,
+    "due_date": "2026-02-01",
+    "due_amount": "800.00",
+    "paid_date": "2026-02-10",
+    "paid_amount": "800.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.596Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 5,
+  "fields": {
+    "client": 1,
+    "due_date": "2026-01-01",
+    "due_amount": "800.00",
+    "paid_date": "2026-01-09",
+    "paid_amount": "800.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.598Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 6,
+  "fields": {
+    "client": 1,
+    "due_date": "2025-12-01",
+    "due_amount": "800.00",
+    "paid_date": "2025-12-02",
+    "paid_amount": "800.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.599Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 7,
+  "fields": {
+    "client": 2,
+    "due_date": "2026-05-01",
+    "due_amount": "2000.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.600Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 8,
+  "fields": {
+    "client": 2,
+    "due_date": "2026-02-01",
+    "due_amount": "2000.00",
+    "paid_date": "2026-02-11",
+    "paid_amount": "2000.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.602Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 9,
+  "fields": {
+    "client": 3,
+    "due_date": "2026-05-01",
+    "due_amount": "400.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.603Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 10,
+  "fields": {
+    "client": 3,
+    "due_date": "2026-04-01",
+    "due_amount": "400.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 2,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.603Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 11,
+  "fields": {
+    "client": 3,
+    "due_date": "2026-03-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-03-03",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.604Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 12,
+  "fields": {
+    "client": 3,
+    "due_date": "2026-02-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-02-07",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.605Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 13,
+  "fields": {
+    "client": 3,
+    "due_date": "2026-01-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-01-06",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.606Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 14,
+  "fields": {
+    "client": 3,
+    "due_date": "2025-12-01",
+    "due_amount": "400.00",
+    "paid_date": "2025-12-13",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.607Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 15,
+  "fields": {
+    "client": 4,
+    "due_date": "2026-05-01",
+    "due_amount": "500.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.608Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 16,
+  "fields": {
+    "client": 4,
+    "due_date": "2026-04-01",
+    "due_amount": "500.00",
+    "paid_date": "2026-04-08",
+    "paid_amount": "500.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.608Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 17,
+  "fields": {
+    "client": 4,
+    "due_date": "2026-03-01",
+    "due_amount": "500.00",
+    "paid_date": "2026-03-08",
+    "paid_amount": "500.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.609Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 18,
+  "fields": {
+    "client": 4,
+    "due_date": "2026-02-01",
+    "due_amount": "500.00",
+    "paid_date": "2026-02-06",
+    "paid_amount": "500.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.610Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 19,
+  "fields": {
+    "client": 4,
+    "due_date": "2026-01-01",
+    "due_amount": "500.00",
+    "paid_date": "2026-01-13",
+    "paid_amount": "500.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.611Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 20,
+  "fields": {
+    "client": 4,
+    "due_date": "2025-12-01",
+    "due_amount": "500.00",
+    "paid_date": "2025-12-14",
+    "paid_amount": "500.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.612Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 21,
+  "fields": {
+    "client": 5,
+    "due_date": "2026-05-01",
+    "due_amount": "1200.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.613Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 22,
+  "fields": {
+    "client": 5,
+    "due_date": "2026-04-01",
+    "due_amount": "1200.00",
+    "paid_date": "2026-04-19",
+    "paid_amount": "1200.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.614Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 23,
+  "fields": {
+    "client": 5,
+    "due_date": "2026-03-01",
+    "due_amount": "1200.00",
+    "paid_date": "2026-03-09",
+    "paid_amount": "1200.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.614Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 24,
+  "fields": {
+    "client": 5,
+    "due_date": "2026-02-01",
+    "due_amount": "1200.00",
+    "paid_date": "2026-02-03",
+    "paid_amount": "1200.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.615Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 25,
+  "fields": {
+    "client": 5,
+    "due_date": "2026-01-01",
+    "due_amount": "1200.00",
+    "paid_date": "2026-01-02",
+    "paid_amount": "1200.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.616Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 26,
+  "fields": {
+    "client": 5,
+    "due_date": "2025-12-01",
+    "due_amount": "1200.00",
+    "paid_date": "2025-12-09",
+    "paid_amount": "1200.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.616Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 27,
+  "fields": {
+    "client": 6,
+    "due_date": "2026-05-01",
+    "due_amount": "350.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.617Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 28,
+  "fields": {
+    "client": 6,
+    "due_date": "2026-04-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-04-07",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.618Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 29,
+  "fields": {
+    "client": 6,
+    "due_date": "2026-03-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-03-09",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.618Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 30,
+  "fields": {
+    "client": 6,
+    "due_date": "2026-02-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-02-11",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.619Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 31,
+  "fields": {
+    "client": 6,
+    "due_date": "2026-01-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-01-12",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.620Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 32,
+  "fields": {
+    "client": 6,
+    "due_date": "2025-12-01",
+    "due_amount": "350.00",
+    "paid_date": "2025-12-14",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.620Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 33,
+  "fields": {
+    "client": 7,
+    "due_date": "2026-05-01",
+    "due_amount": "2500.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.621Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 34,
+  "fields": {
+    "client": 7,
+    "due_date": "2026-02-01",
+    "due_amount": "2500.00",
+    "paid_date": "2026-02-09",
+    "paid_amount": "2500.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.622Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 35,
+  "fields": {
+    "client": 8,
+    "due_date": "2026-05-01",
+    "due_amount": "400.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.622Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 36,
+  "fields": {
+    "client": 8,
+    "due_date": "2026-04-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-04-14",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.623Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 37,
+  "fields": {
+    "client": 8,
+    "due_date": "2026-03-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-03-13",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.624Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 38,
+  "fields": {
+    "client": 8,
+    "due_date": "2026-02-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-02-13",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.624Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 39,
+  "fields": {
+    "client": 8,
+    "due_date": "2026-01-01",
+    "due_amount": "400.00",
+    "paid_date": "2026-01-02",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.625Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 40,
+  "fields": {
+    "client": 8,
+    "due_date": "2025-12-01",
+    "due_amount": "400.00",
+    "paid_date": "2025-12-07",
+    "paid_amount": "400.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.626Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 41,
+  "fields": {
+    "client": 9,
+    "due_date": "2026-05-01",
+    "due_amount": "450.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.626Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 42,
+  "fields": {
+    "client": 9,
+    "due_date": "2026-04-01",
+    "due_amount": "450.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 2,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.627Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 43,
+  "fields": {
+    "client": 9,
+    "due_date": "2026-03-01",
+    "due_amount": "450.00",
+    "paid_date": "2026-03-13",
+    "paid_amount": "450.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.628Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 44,
+  "fields": {
+    "client": 9,
+    "due_date": "2026-02-01",
+    "due_amount": "450.00",
+    "paid_date": "2026-02-08",
+    "paid_amount": "450.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.629Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 45,
+  "fields": {
+    "client": 9,
+    "due_date": "2026-01-01",
+    "due_amount": "450.00",
+    "paid_date": "2026-01-07",
+    "paid_amount": "450.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.629Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 46,
+  "fields": {
+    "client": 9,
+    "due_date": "2025-12-01",
+    "due_amount": "450.00",
+    "paid_date": "2025-12-03",
+    "paid_amount": "450.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.630Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 47,
+  "fields": {
+    "client": 10,
+    "due_date": "2026-05-01",
+    "due_amount": "350.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.630Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 48,
+  "fields": {
+    "client": 10,
+    "due_date": "2026-04-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-04-10",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.630Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 49,
+  "fields": {
+    "client": 10,
+    "due_date": "2026-03-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-03-04",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.631Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 50,
+  "fields": {
+    "client": 10,
+    "due_date": "2026-02-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-02-04",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.631Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 51,
+  "fields": {
+    "client": 10,
+    "due_date": "2026-01-01",
+    "due_amount": "350.00",
+    "paid_date": "2026-01-11",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.632Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 52,
+  "fields": {
+    "client": 10,
+    "due_date": "2025-12-01",
+    "due_amount": "350.00",
+    "paid_date": "2025-12-04",
+    "paid_amount": "350.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.632Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 53,
+  "fields": {
+    "client": 11,
+    "due_date": "2026-05-01",
+    "due_amount": "1000.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.632Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 54,
+  "fields": {
+    "client": 11,
+    "due_date": "2026-04-01",
+    "due_amount": "1000.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 2,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.633Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 55,
+  "fields": {
+    "client": 11,
+    "due_date": "2026-03-01",
+    "due_amount": "1000.00",
+    "paid_date": "2026-03-16",
+    "paid_amount": "1000.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.633Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 56,
+  "fields": {
+    "client": 11,
+    "due_date": "2026-02-01",
+    "due_amount": "1000.00",
+    "paid_date": "2026-02-11",
+    "paid_amount": "1000.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.634Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 57,
+  "fields": {
+    "client": 11,
+    "due_date": "2026-01-01",
+    "due_amount": "1000.00",
+    "paid_date": "2026-01-02",
+    "paid_amount": "1000.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.634Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 58,
+  "fields": {
+    "client": 11,
+    "due_date": "2025-12-01",
+    "due_amount": "1000.00",
+    "paid_date": "2025-12-10",
+    "paid_amount": "1000.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.634Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 59,
+  "fields": {
+    "client": 12,
+    "due_date": "2026-05-01",
+    "due_amount": "300.00",
+    "paid_date": null,
+    "paid_amount": "0.00",
+    "status": 0,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.635Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 60,
+  "fields": {
+    "client": 12,
+    "due_date": "2026-04-01",
+    "due_amount": "300.00",
+    "paid_date": "2026-04-11",
+    "paid_amount": "300.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.635Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 61,
+  "fields": {
+    "client": 12,
+    "due_date": "2026-03-01",
+    "due_amount": "300.00",
+    "paid_date": "2026-03-10",
+    "paid_amount": "300.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.636Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 62,
+  "fields": {
+    "client": 12,
+    "due_date": "2026-02-01",
+    "due_amount": "300.00",
+    "paid_date": "2026-02-12",
+    "paid_amount": "300.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.636Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 63,
+  "fields": {
+    "client": 12,
+    "due_date": "2026-01-01",
+    "due_amount": "300.00",
+    "paid_date": "2026-01-04",
+    "paid_amount": "300.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.636Z"
+  }
+},
+{
+  "model": "myadmin.fee",
+  "pk": 64,
+  "fields": {
+    "client": 12,
+    "due_date": "2025-12-01",
+    "due_amount": "300.00",
+    "paid_date": "2025-12-10",
+    "paid_amount": "300.00",
+    "status": 1,
+    "remark": "",
+    "create_at": "2026-05-30T08:59:46.637Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "month": "2026-05",
+    "base_salary": "12000.00",
+    "performance_salary": "3174.00",
+    "total_salary": "15174.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.242Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "month": "2026-04",
+    "base_salary": "12000.00",
+    "performance_salary": "5471.00",
+    "total_salary": "17471.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.244Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "month": "2026-03",
+    "base_salary": "12000.00",
+    "performance_salary": "5136.00",
+    "total_salary": "17136.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.245Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "month": "2026-02",
+    "base_salary": "12000.00",
+    "performance_salary": "4201.00",
+    "total_salary": "16201.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.246Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "month": "2026-05",
+    "base_salary": "7500.00",
+    "performance_salary": "2263.00",
+    "total_salary": "9763.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.247Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 6,
+  "fields": {
+    "user": 3,
+    "month": "2026-04",
+    "base_salary": "8000.00",
+    "performance_salary": "3551.00",
+    "total_salary": "11551.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.249Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 7,
+  "fields": {
+    "user": 3,
+    "month": "2026-03",
+    "base_salary": "7000.00",
+    "performance_salary": "2566.00",
+    "total_salary": "9566.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.250Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 8,
+  "fields": {
+    "user": 3,
+    "month": "2026-02",
+    "base_salary": "7000.00",
+    "performance_salary": "1845.00",
+    "total_salary": "8845.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.251Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 9,
+  "fields": {
+    "user": 4,
+    "month": "2026-05",
+    "base_salary": "6500.00",
+    "performance_salary": "2434.00",
+    "total_salary": "8934.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.252Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 10,
+  "fields": {
+    "user": 4,
+    "month": "2026-04",
+    "base_salary": "6000.00",
+    "performance_salary": "2482.00",
+    "total_salary": "8482.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.253Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 11,
+  "fields": {
+    "user": 4,
+    "month": "2026-03",
+    "base_salary": "8000.00",
+    "performance_salary": "3380.00",
+    "total_salary": "11380.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.254Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 12,
+  "fields": {
+    "user": 4,
+    "month": "2026-02",
+    "base_salary": "6000.00",
+    "performance_salary": "3256.00",
+    "total_salary": "9256.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.255Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 13,
+  "fields": {
+    "user": 5,
+    "month": "2026-05",
+    "base_salary": "7500.00",
+    "performance_salary": "2448.00",
+    "total_salary": "9948.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.256Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 14,
+  "fields": {
+    "user": 5,
+    "month": "2026-04",
+    "base_salary": "7500.00",
+    "performance_salary": "3280.00",
+    "total_salary": "10780.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.256Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 15,
+  "fields": {
+    "user": 5,
+    "month": "2026-03",
+    "base_salary": "6000.00",
+    "performance_salary": "2884.00",
+    "total_salary": "8884.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.257Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 16,
+  "fields": {
+    "user": 5,
+    "month": "2026-02",
+    "base_salary": "7000.00",
+    "performance_salary": "4000.00",
+    "total_salary": "11000.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.258Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 17,
+  "fields": {
+    "user": 6,
+    "month": "2026-05",
+    "base_salary": "7000.00",
+    "performance_salary": "2891.00",
+    "total_salary": "9891.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.259Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 18,
+  "fields": {
+    "user": 6,
+    "month": "2026-04",
+    "base_salary": "7500.00",
+    "performance_salary": "2887.00",
+    "total_salary": "10387.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.260Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 19,
+  "fields": {
+    "user": 6,
+    "month": "2026-03",
+    "base_salary": "6500.00",
+    "performance_salary": "1869.00",
+    "total_salary": "8369.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.261Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 20,
+  "fields": {
+    "user": 6,
+    "month": "2026-02",
+    "base_salary": "7000.00",
+    "performance_salary": "3229.00",
+    "total_salary": "10229.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.261Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 21,
+  "fields": {
+    "user": 7,
+    "month": "2026-05",
+    "base_salary": "7000.00",
+    "performance_salary": "2699.00",
+    "total_salary": "9699.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.262Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 22,
+  "fields": {
+    "user": 7,
+    "month": "2026-04",
+    "base_salary": "7500.00",
+    "performance_salary": "1721.00",
+    "total_salary": "9221.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.263Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 23,
+  "fields": {
+    "user": 7,
+    "month": "2026-03",
+    "base_salary": "7500.00",
+    "performance_salary": "3402.00",
+    "total_salary": "10902.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.263Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 24,
+  "fields": {
+    "user": 7,
+    "month": "2026-02",
+    "base_salary": "7500.00",
+    "performance_salary": "3714.00",
+    "total_salary": "11214.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.264Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 25,
+  "fields": {
+    "user": 8,
+    "month": "2026-05",
+    "base_salary": "7000.00",
+    "performance_salary": "2022.00",
+    "total_salary": "9022.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.265Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 26,
+  "fields": {
+    "user": 8,
+    "month": "2026-04",
+    "base_salary": "7500.00",
+    "performance_salary": "2374.00",
+    "total_salary": "9874.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.266Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 27,
+  "fields": {
+    "user": 8,
+    "month": "2026-03",
+    "base_salary": "6500.00",
+    "performance_salary": "2036.00",
+    "total_salary": "8536.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.267Z"
+  }
+},
+{
+  "model": "myadmin.salary",
+  "pk": 28,
+  "fields": {
+    "user": 8,
+    "month": "2026-02",
+    "base_salary": "7000.00",
+    "performance_salary": "2249.00",
+    "total_salary": "9249.00",
+    "remark": "",
+    "create_at": "2026-05-30T09:06:59.267Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-06",
+    "work_type": "consulting",
+    "content": "协助客户工商年报填报",
+    "create_at": "2026-05-30T09:23:18.451Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-24",
+    "work_type": "other",
+    "content": "更新客户联系信息",
+    "create_at": "2026-05-30T09:23:18.451Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "client": 7,
+    "date": "2026-05-25",
+    "work_type": "tax_filing",
+    "content": "完成企业所得税季报",
+    "create_at": "2026-05-30T09:23:18.452Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 4,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-03",
+    "work_type": "other",
+    "content": "更新客户联系信息",
+    "create_at": "2026-05-30T09:23:18.453Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "client": 7,
+    "date": "2026-05-14",
+    "work_type": "other",
+    "content": "更新客户联系信息",
+    "create_at": "2026-05-30T09:23:18.453Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 6,
+  "fields": {
+    "user": 3,
+    "client": 7,
+    "date": "2026-05-30",
+    "work_type": "consulting",
+    "content": "协助客户工商年报填报",
+    "create_at": "2026-05-30T09:23:18.454Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 7,
+  "fields": {
+    "user": 3,
+    "client": 7,
+    "date": "2026-05-25",
+    "work_type": "other",
+    "content": "与客户沟通对账差异",
+    "create_at": "2026-05-30T09:23:18.454Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 8,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-01",
+    "work_type": "tax_filing",
+    "content": "完成个税代扣代缴申报",
+    "create_at": "2026-05-30T09:23:18.454Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 9,
+  "fields": {
+    "user": 3,
+    "client": 7,
+    "date": "2026-05-03",
+    "work_type": "invoicing",
+    "content": "红冲错误发票并重开",
+    "create_at": "2026-05-30T09:23:18.455Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 10,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-01",
+    "work_type": "invoicing",
+    "content": "核对进项发票认证",
+    "create_at": "2026-05-30T09:23:18.455Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 11,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-13",
+    "work_type": "invoicing",
+    "content": "开具销售发票5张",
+    "create_at": "2026-05-30T09:23:18.456Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 12,
+  "fields": {
+    "user": 3,
+    "client": 1,
+    "date": "2026-05-10",
+    "work_type": "consulting",
+    "content": "解答客户社保缴纳咨询",
+    "create_at": "2026-05-30T09:23:18.457Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 13,
+  "fields": {
+    "user": 3,
+    "client": 7,
+    "date": "2026-05-25",
+    "work_type": "invoicing",
+    "content": "开具服务费发票3张",
+    "create_at": "2026-05-30T09:23:18.458Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 14,
+  "fields": {
+    "user": 4,
+    "client": 8,
+    "date": "2026-04-30",
+    "work_type": "tax_filing",
+    "content": "完成企业所得税季报",
+    "create_at": "2026-05-30T09:23:18.459Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 15,
+  "fields": {
+    "user": 4,
+    "client": 8,
+    "date": "2026-05-01",
+    "work_type": "tax_filing",
+    "content": "核对税金并确认申报数据",
+    "create_at": "2026-05-30T09:23:18.460Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 16,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-19",
+    "work_type": "tax_filing",
+    "content": "办理税务变更登记",
+    "create_at": "2026-05-30T09:23:18.460Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 17,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-24",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.460Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 18,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-04",
+    "work_type": "consulting",
+    "content": "解答客户社保缴纳咨询",
+    "create_at": "2026-05-30T09:23:18.461Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 19,
+  "fields": {
+    "user": 4,
+    "client": 8,
+    "date": "2026-05-30",
+    "work_type": "invoicing",
+    "content": "开具服务费发票3张",
+    "create_at": "2026-05-30T09:23:18.461Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 20,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-04-30",
+    "work_type": "bookkeeping",
+    "content": "整理原始票据归档",
+    "create_at": "2026-05-30T09:23:18.462Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 21,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-06",
+    "work_type": "consulting",
+    "content": "讲解新税收优惠政策",
+    "create_at": "2026-05-30T09:23:18.463Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 22,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-09",
+    "work_type": "other",
+    "content": "参加财务培训学习",
+    "create_at": "2026-05-30T09:23:18.463Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 23,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-10",
+    "work_type": "bookkeeping",
+    "content": "完成本月凭证录入",
+    "create_at": "2026-05-30T09:23:18.464Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 24,
+  "fields": {
+    "user": 4,
+    "client": 8,
+    "date": "2026-05-09",
+    "work_type": "consulting",
+    "content": "解答客户社保缴纳咨询",
+    "create_at": "2026-05-30T09:23:18.464Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 25,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-03",
+    "work_type": "other",
+    "content": "更新客户联系信息",
+    "create_at": "2026-05-30T09:23:18.465Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 26,
+  "fields": {
+    "user": 4,
+    "client": 8,
+    "date": "2026-05-18",
+    "work_type": "other",
+    "content": "与客户沟通对账差异",
+    "create_at": "2026-05-30T09:23:18.465Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 27,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-05",
+    "work_type": "consulting",
+    "content": "协助客户工商年报填报",
+    "create_at": "2026-05-30T09:23:18.465Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 28,
+  "fields": {
+    "user": 4,
+    "client": 2,
+    "date": "2026-05-09",
+    "work_type": "other",
+    "content": "配合审计提供材料",
+    "create_at": "2026-05-30T09:23:18.466Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 29,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-07",
+    "work_type": "other",
+    "content": "与客户沟通对账差异",
+    "create_at": "2026-05-30T09:23:18.466Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 30,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-30",
+    "work_type": "tax_filing",
+    "content": "完成企业所得税季报",
+    "create_at": "2026-05-30T09:23:18.467Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 31,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-12",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.467Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 32,
+  "fields": {
+    "user": 5,
+    "client": 9,
+    "date": "2026-05-27",
+    "work_type": "tax_filing",
+    "content": "完成个税代扣代缴申报",
+    "create_at": "2026-05-30T09:23:18.468Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 33,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-11",
+    "work_type": "consulting",
+    "content": "协助客户工商年报填报",
+    "create_at": "2026-05-30T09:23:18.468Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 34,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-29",
+    "work_type": "other",
+    "content": "配合审计提供材料",
+    "create_at": "2026-05-30T09:23:18.468Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 35,
+  "fields": {
+    "user": 5,
+    "client": 9,
+    "date": "2026-05-26",
+    "work_type": "tax_filing",
+    "content": "完成个税代扣代缴申报",
+    "create_at": "2026-05-30T09:23:18.469Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 36,
+  "fields": {
+    "user": 5,
+    "client": 9,
+    "date": "2026-05-15",
+    "work_type": "invoicing",
+    "content": "发票领购与验旧",
+    "create_at": "2026-05-30T09:23:18.469Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 37,
+  "fields": {
+    "user": 5,
+    "client": 9,
+    "date": "2026-05-25",
+    "work_type": "bookkeeping",
+    "content": "核对银行流水并记账",
+    "create_at": "2026-05-30T09:23:18.469Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 38,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-30",
+    "work_type": "consulting",
+    "content": "讲解新税收优惠政策",
+    "create_at": "2026-05-30T09:23:18.470Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 39,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-12",
+    "work_type": "invoicing",
+    "content": "红冲错误发票并重开",
+    "create_at": "2026-05-30T09:23:18.470Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 40,
+  "fields": {
+    "user": 5,
+    "client": 3,
+    "date": "2026-05-22",
+    "work_type": "bookkeeping",
+    "content": "完成本月凭证录入",
+    "create_at": "2026-05-30T09:23:18.470Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 41,
+  "fields": {
+    "user": 6,
+    "client": 4,
+    "date": "2026-05-22",
+    "work_type": "tax_filing",
+    "content": "完成增值税申报",
+    "create_at": "2026-05-30T09:23:18.471Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 42,
+  "fields": {
+    "user": 6,
+    "client": 4,
+    "date": "2026-05-29",
+    "work_type": "invoicing",
+    "content": "开具服务费发票3张",
+    "create_at": "2026-05-30T09:23:18.471Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 43,
+  "fields": {
+    "user": 6,
+    "client": 10,
+    "date": "2026-05-18",
+    "work_type": "tax_filing",
+    "content": "办理税务变更登记",
+    "create_at": "2026-05-30T09:23:18.472Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 44,
+  "fields": {
+    "user": 6,
+    "client": 10,
+    "date": "2026-05-21",
+    "work_type": "invoicing",
+    "content": "开具服务费发票3张",
+    "create_at": "2026-05-30T09:23:18.472Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 45,
+  "fields": {
+    "user": 6,
+    "client": 10,
+    "date": "2026-05-06",
+    "work_type": "tax_filing",
+    "content": "完成增值税申报",
+    "create_at": "2026-05-30T09:23:18.472Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 46,
+  "fields": {
+    "user": 6,
+    "client": 4,
+    "date": "2026-05-07",
+    "work_type": "invoicing",
+    "content": "开具服务费发票3张",
+    "create_at": "2026-05-30T09:23:18.473Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 47,
+  "fields": {
+    "user": 6,
+    "client": 10,
+    "date": "2026-05-13",
+    "work_type": "consulting",
+    "content": "协助客户办理银行开户",
+    "create_at": "2026-05-30T09:23:18.473Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 48,
+  "fields": {
+    "user": 6,
+    "client": 10,
+    "date": "2026-05-03",
+    "work_type": "consulting",
+    "content": "协助客户工商年报填报",
+    "create_at": "2026-05-30T09:23:18.473Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 49,
+  "fields": {
+    "user": 6,
+    "client": 4,
+    "date": "2026-05-24",
+    "work_type": "consulting",
+    "content": "讲解新税收优惠政策",
+    "create_at": "2026-05-30T09:23:18.473Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 50,
+  "fields": {
+    "user": 6,
+    "client": 4,
+    "date": "2026-05-13",
+    "work_type": "other",
+    "content": "参加财务培训学习",
+    "create_at": "2026-05-30T09:23:18.474Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 51,
+  "fields": {
+    "user": 6,
+    "client": 10,
+    "date": "2026-05-27",
+    "work_type": "other",
+    "content": "参加财务培训学习",
+    "create_at": "2026-05-30T09:23:18.474Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 52,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-05-17",
+    "work_type": "consulting",
+    "content": "协助客户工商年报填报",
+    "create_at": "2026-05-30T09:23:18.475Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 53,
+  "fields": {
+    "user": 7,
+    "client": 11,
+    "date": "2026-05-22",
+    "work_type": "bookkeeping",
+    "content": "录入费用报销单据",
+    "create_at": "2026-05-30T09:23:18.475Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 54,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-05-30",
+    "work_type": "invoicing",
+    "content": "红冲错误发票并重开",
+    "create_at": "2026-05-30T09:23:18.475Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 55,
+  "fields": {
+    "user": 7,
+    "client": 11,
+    "date": "2026-05-15",
+    "work_type": "other",
+    "content": "参加财务培训学习",
+    "create_at": "2026-05-30T09:23:18.476Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 56,
+  "fields": {
+    "user": 7,
+    "client": 11,
+    "date": "2026-05-12",
+    "work_type": "bookkeeping",
+    "content": "录入费用报销单据",
+    "create_at": "2026-05-30T09:23:18.476Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 57,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-05-01",
+    "work_type": "bookkeeping",
+    "content": "录入费用报销单据",
+    "create_at": "2026-05-30T09:23:18.476Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 58,
+  "fields": {
+    "user": 7,
+    "client": 11,
+    "date": "2026-05-22",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.477Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 59,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-04-30",
+    "work_type": "bookkeeping",
+    "content": "整理原始票据归档",
+    "create_at": "2026-05-30T09:23:18.477Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 60,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-05-30",
+    "work_type": "other",
+    "content": "参加财务培训学习",
+    "create_at": "2026-05-30T09:23:18.477Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 61,
+  "fields": {
+    "user": 7,
+    "client": 11,
+    "date": "2026-05-20",
+    "work_type": "tax_filing",
+    "content": "完成企业所得税季报",
+    "create_at": "2026-05-30T09:23:18.478Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 62,
+  "fields": {
+    "user": 7,
+    "client": 11,
+    "date": "2026-05-02",
+    "work_type": "tax_filing",
+    "content": "办理税务变更登记",
+    "create_at": "2026-05-30T09:23:18.478Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 63,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-05-05",
+    "work_type": "other",
+    "content": "更新客户联系信息",
+    "create_at": "2026-05-30T09:23:18.478Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 64,
+  "fields": {
+    "user": 7,
+    "client": 5,
+    "date": "2026-04-30",
+    "work_type": "invoicing",
+    "content": "核对进项发票认证",
+    "create_at": "2026-05-30T09:23:18.478Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 65,
+  "fields": {
+    "user": 8,
+    "client": 6,
+    "date": "2026-04-30",
+    "work_type": "other",
+    "content": "参加财务培训学习",
+    "create_at": "2026-05-30T09:23:18.479Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 66,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-19",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.480Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 67,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-29",
+    "work_type": "invoicing",
+    "content": "开具服务费发票3张",
+    "create_at": "2026-05-30T09:23:18.480Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 68,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-17",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.480Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 69,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-02",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.480Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 70,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-16",
+    "work_type": "bookkeeping",
+    "content": "核对银行流水并记账",
+    "create_at": "2026-05-30T09:23:18.481Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 71,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-30",
+    "work_type": "tax_filing",
+    "content": "完成增值税申报",
+    "create_at": "2026-05-30T09:23:18.481Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 72,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-04",
+    "work_type": "bookkeeping",
+    "content": "月末结转损益",
+    "create_at": "2026-05-30T09:23:18.481Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 73,
+  "fields": {
+    "user": 8,
+    "client": 6,
+    "date": "2026-05-16",
+    "work_type": "tax_filing",
+    "content": "完成个税代扣代缴申报",
+    "create_at": "2026-05-30T09:23:18.482Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 74,
+  "fields": {
+    "user": 8,
+    "client": 6,
+    "date": "2026-04-30",
+    "work_type": "invoicing",
+    "content": "核对进项发票认证",
+    "create_at": "2026-05-30T09:23:18.482Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 75,
+  "fields": {
+    "user": 8,
+    "client": 6,
+    "date": "2026-05-27",
+    "work_type": "tax_filing",
+    "content": "核对税金并确认申报数据",
+    "create_at": "2026-05-30T09:23:18.482Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 76,
+  "fields": {
+    "user": 8,
+    "client": 6,
+    "date": "2026-05-28",
+    "work_type": "other",
+    "content": "与客户沟通对账差异",
+    "create_at": "2026-05-30T09:23:18.482Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 77,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-05",
+    "work_type": "bookkeeping",
+    "content": "完成本月凭证录入",
+    "create_at": "2026-05-30T09:23:18.483Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 78,
+  "fields": {
+    "user": 8,
+    "client": 12,
+    "date": "2026-05-20",
+    "work_type": "consulting",
+    "content": "回答客户关于成本核算的问题",
+    "create_at": "2026-05-30T09:23:18.483Z"
+  }
+},
+{
+  "model": "myadmin.worklog",
+  "pk": 79,
+  "fields": {
+    "user": 8,
+    "client": 6,
+    "date": "2026-05-19",
+    "work_type": "other",
+    "content": "更新客户联系信息",
+    "create_at": "2026-05-30T09:23:18.483Z"
+  }
+}
+]

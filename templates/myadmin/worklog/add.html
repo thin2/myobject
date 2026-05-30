@@ -1,0 +1,67 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>工作日志 <small>填写日志</small></h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li><a href="{% url 'myadmin_worklog_index' 1 %}">工作日志</a></li>
+    <li class="active">填写日志</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">填写工作日志</h3>
+        </div>
+        {% if error %}
+        <div class="alert alert-danger" style="margin:10px;">{{ error }}</div>
+        {% endif %}
+        <form action="{% url 'myadmin_worklog_insert' %}" method="post">
+          {% csrf_token %}
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>日期 <span class="text-red">*</span></label>
+                  <input type="date" name="date" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>工作类型</label>
+                  <select name="work_type" class="form-control">
+                    {% for val, label in type_choices %}
+                    <option value="{{ val }}">{{ label }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>关联客户</label>
+              <select name="client" class="form-control">
+                <option value="">--无关联客户--</option>
+                {% for c in clients %}
+                <option value="{{ c.id }}">{{ c.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <label>工作内容 <span class="text-red">*</span></label>
+              <textarea name="content" class="form-control" rows="5" placeholder="请描述今日工作内容" required></textarea>
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">提 交</button>
+            <a href="{% url 'myadmin_worklog_index' 1 %}" class="btn btn-default">返 回</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

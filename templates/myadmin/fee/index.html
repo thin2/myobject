@@ -1,0 +1,85 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>收费管理 <small>收费记录</small></h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li class="active">收费管理</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">收费记录</h3>
+          <div class="box-tools">
+            <form action="{% url 'myadmin_fee_index' 1 %}" method="get" class="form-inline">
+              <select name="status" class="form-control input-sm" style="width:100px;">
+                <option value="">全部状态</option>
+                <option value="0" {% if request.GET.status == '0' %}selected{% endif %}>待缴</option>
+                <option value="1" {% if request.GET.status == '1' %}selected{% endif %}>已缴</option>
+                <option value="2" {% if request.GET.status == '2' %}selected{% endif %}>欠费</option>
+              </select>
+              <div class="input-group input-group-sm" style="width:180px;">
+                <input type="text" name="keyword" class="form-control" placeholder="客户名称/编号" value="{{ request.GET.keyword|default:'' }}">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>客户编号</th>
+              <th>企业名称</th>
+              <th>应收日期</th>
+              <th>应收金额</th>
+              <th>实收日期</th>
+              <th>实收金额</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+            {% for vo in feelist %}
+            <tr>
+              <td>{{ vo.client.client_no }}</td>
+              <td>{{ vo.client.name }}</td>
+              <td>{{ vo.due_date|date:"Y-m-d" }}</td>
+              <td>{{ vo.due_amount }} 元</td>
+              <td>{{ vo.paid_date|date:"Y-m-d"|default:"-" }}</td>
+              <td>{{ vo.paid_amount }} 元</td>
+              <td>
+                {% if vo.status == 0 %}<span class="label label-default">待缴</span>
+                {% elif vo.status == 1 %}<span class="label label-success">已缴</span>
+                {% else %}<span class="label label-danger">欠费</span>{% endif %}
+              </td>
+              <td>
+                {% if vo.status != 1 and request.user.role != 'accountant' %}
+                <a href="{% url 'myadmin_fee_pay' vo.id %}" class="btn btn-primary btn-xs"><i class="fa fa-check"></i> 确认收款</a>
+                {% endif %}
+              </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="8" class="text-center">暂无数据</td></tr>
+            {% endfor %}
+          </table>
+        </div>
+        <div class="box-footer clearfix">
+          <a href="{% url 'myadmin_fee_remind' %}" class="btn btn-warning"><i class="fa fa-bell"></i> 催收提醒</a>
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="{% url 'myadmin_fee_index' pIndex|add:-1 %}?{{ mywhere|join:'&' }}">&laquo;</a></li>
+            {% for p in plist %}
+            <li {% if p == pIndex %}class="active"{% endif %}><a href="{% url 'myadmin_fee_index' p %}?{{ mywhere|join:'&' }}">{{ p }}</a></li>
+            {% endfor %}
+            <li><a href="{% url 'myadmin_fee_index' pIndex|add:1 %}?{{ mywhere|join:'&' }}">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

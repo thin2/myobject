@@ -1,85 +1,103 @@
 {% extends 'myadmin/base.html' %}
 
 {% block main_body %}
- <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        首页
-        <small>会计代账后台管理</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
+<section class="content-header">
+  <h1>仪表盘 <small>数据概览</small></h1>
+</section>
 
-    <!-- Main content -->
-    <section class="content container-fluid">
-
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>新订单</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
+<section class="content container-fluid">
+  {% if request.user.role == 'accountant' %}
+  <div class="row">
+    <div class="col-lg-4 col-xs-6">
+      <div class="small-box bg-aqua">
+        <div class="inner">
+          <h3>{{ my_clients }}</h3>
+          <p>我的客户数</p>
         </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-              <p>Bounce Rate</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>44</h3>
-
-              <p>用户注册</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>65</h3>
-
-              <p>Unique Visitors</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
+        <div class="icon"><i class="fa fa-building"></i></div>
+        <a href="{% url 'myadmin_client_index' 1 %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
       </div>
-
-    </section>
-    <!-- /.content -->
+    </div>
+    <div class="col-lg-4 col-xs-6">
+      <div class="small-box bg-red">
+        <div class="inner">
+          <h3>{{ my_overdue }}</h3>
+          <p>待催收数</p>
+        </div>
+        <div class="icon"><i class="fa fa-bell"></i></div>
+        <a href="{% url 'myadmin_fee_remind' %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-4 col-xs-6">
+      <div class="small-box bg-green">
+        <div class="inner">
+          <h3>{{ my_worklogs }}</h3>
+          <p>本月日志数</p>
+        </div>
+        <div class="icon"><i class="fa fa-pencil"></i></div>
+        <a href="{% url 'myadmin_worklog_index' 1 %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="row">
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-aqua">
+        <div class="inner">
+          <h3>{{ total_clients }}</h3>
+          <p>活跃客户数</p>
+        </div>
+        <div class="icon"><i class="fa fa-building"></i></div>
+        <a href="{% url 'myadmin_client_index' 1 %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-green">
+        <div class="inner">
+          <h3>{{ total_employees }}</h3>
+          <p>在职会计数</p>
+        </div>
+        <div class="icon"><i class="fa fa-users"></i></div>
+        <a href="{% url 'myadmin_user_index' 1 %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-yellow">
+        <div class="inner">
+          <h3>{{ overdue_count }}</h3>
+          <p>欠费记录数</p>
+        </div>
+        <div class="icon"><i class="fa fa-warning"></i></div>
+        <a href="{% url 'myadmin_fee_remind' %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box bg-{% if month_profit >= 0 %}green{% else %}red{% endif %}">
+        <div class="inner">
+          <h3>{{ month_profit }} 元</h3>
+          <p>本月收益</p>
+        </div>
+        <div class="icon"><i class="fa fa-line-chart"></i></div>
+        <a href="{% url 'myadmin_report_index' %}" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">本月收支</h3>
+        </div>
+        <div class="box-body">
+          <table class="table">
+            <tr><th>本月收入</th><td class="text-green"><strong>{{ month_income }} 元</strong></td></tr>
+            <tr><th>本月支出</th><td class="text-red"><strong>{{ month_expense }} 元</strong></td></tr>
+            <tr><th>本月收益</th><td><strong>{{ month_profit }} 元</strong></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
 {% endblock %}

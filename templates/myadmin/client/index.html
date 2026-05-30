@@ -1,0 +1,102 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>客户管理 <small>客户列表</small></h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li class="active">客户管理</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">客户信息表</h3>
+          <div class="box-tools">
+            <form action="{% url 'myadmin_client_index' 1 %}" method="get" class="form-inline">
+              <select name="nature" class="form-control input-sm" style="width:120px;">
+                <option value="">全部性质</option>
+                <option value="small" {% if request.GET.nature == 'small' %}selected{% endif %}>小规模纳税人</option>
+                <option value="general" {% if request.GET.nature == 'general' %}selected{% endif %}>一般纳税人</option>
+              </select>
+              <div class="input-group input-group-sm" style="width:200px;">
+                <input type="text" name="keyword" class="form-control" placeholder="编号/企业名/联系人" value="{{ request.GET.keyword|default:'' }}">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>编号</th>
+              <th>企业名称</th>
+              <th>企业性质</th>
+              <th>联系人</th>
+              <th>联系电话</th>
+              <th>对接会计</th>
+              <th>缴费金额</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+            {% for vo in clientlist %}
+            <tr>
+              <td>{{ vo.client_no }}</td>
+              <td><a href="{% url 'myadmin_client_detail' vo.id %}">{{ vo.name }}</a></td>
+              <td>{{ vo.get_nature_display }}</td>
+              <td>{{ vo.contact_name }}</td>
+              <td>{{ vo.contact_phone }}</td>
+              <td>{{ vo.accountant.first_name|default:"未分配" }}</td>
+              <td>{{ vo.fee_amount }} 元/{{ vo.get_fee_cycle_display }}</td>
+              <td>
+                {% if vo.status == 1 %}
+                <span class="label label-success">正常</span>
+                {% else %}
+                <span class="label label-warning">停用</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if request.user.role != 'accountant' %}
+                <a href="{% url 'myadmin_client_edit' vo.id %}" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> 编辑</a>
+                <a href="javascript:;" onclick="doDel('{% url 'myadmin_client_delete' vo.id %}')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> 删除</a>
+                {% endif %}
+                <a href="{% url 'myadmin_client_detail' vo.id %}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> 详情</a>
+              </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="9" class="text-center">暂无数据</td></tr>
+            {% endfor %}
+          </table>
+        </div>
+        <div class="box-footer clearfix">
+          {% if request.user.role != 'accountant' %}
+          <a href="{% url 'myadmin_client_add' %}" class="btn btn-primary"><i class="fa fa-plus"></i> 添加客户</a>
+          {% endif %}
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="{% url 'myadmin_client_index' pIndex|add:-1 %}?{{ mywhere|join:'&' }}">&laquo;</a></li>
+            {% for p in plist %}
+            <li {% if p == pIndex %}class="active"{% endif %}><a href="{% url 'myadmin_client_index' p %}?{{ mywhere|join:'&' }}">{{ p }}</a></li>
+            {% endfor %}
+            <li><a href="{% url 'myadmin_client_index' pIndex|add:1 %}?{{ mywhere|join:'&' }}">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function doDel(url){
+  Modal.confirm({msg:"确定要删除该客户吗？",title:'信息提示',btnok:'确定',btncl:'取消'}).on(function(e){
+    if(e){ window.location.href = url; }
+  });
+}
+</script>
+{% endblock %}

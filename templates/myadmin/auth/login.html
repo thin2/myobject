@@ -1,0 +1,327 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>登录 - 代账公司管理系统</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink-deep: #0a1628;
+      --ink-mid: #1a2a4a;
+      --ink-light: #2d4a6f;
+      --gold-accent: #c9a96e;
+      --gold-light: #e8d5a3;
+      --text-primary: #f0ece4;
+      --text-muted: #a0aab8;
+      --glass-bg: rgba(255, 255, 255, 0.04);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-hover: rgba(255, 255, 255, 0.06);
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--ink-deep);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Ink wash background */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .bg-layer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 80%, rgba(45, 74, 111, 0.4) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 20%, rgba(26, 42, 74, 0.6) 0%, transparent 50%),
+        radial-gradient(ellipse 100% 100% at 50% 50%, rgba(10, 22, 40, 0.9) 0%, transparent 80%);
+    }
+
+    .bg-layer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 70% 70%, rgba(201, 169, 110, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 30% 30%, rgba(201, 169, 110, 0.02) 0%, transparent 30%);
+    }
+
+    /* Floating mountain silhouettes */
+    .mountains {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40vh;
+      z-index: 0;
+      opacity: 0.15;
+    }
+
+    .mountains svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--ink-light);
+    }
+
+    /* Noise texture overlay */
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    /* Login container */
+    .login-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+      animation: fadeUp 0.8s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Brand header */
+    .brand {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .brand-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold-accent), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(201, 169, 110, 0.2);
+    }
+
+    .brand-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--ink-deep);
+    }
+
+    .brand h1 {
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--text-primary);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .brand p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    /* Glass card */
+    .login-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    /* Form styles */
+    .form-field {
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .form-field .input-wrap {
+      position: relative;
+    }
+
+    .form-field input {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .form-field input::placeholder {
+      color: rgba(160, 170, 184, 0.5);
+    }
+
+    .form-field input:focus {
+      border-color: var(--gold-accent);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+    }
+
+    .form-field .input-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: var(--text-muted);
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+
+    .form-field input:focus ~ .input-icon,
+    .form-field input:focus + .input-icon {
+      opacity: 1;
+      color: var(--gold-accent);
+    }
+
+    /* Submit button */
+    .btn-login {
+      width: 100%;
+      padding: 15px;
+      margin-top: 8px;
+      background: linear-gradient(135deg, var(--gold-accent), #b8944f);
+      border: none;
+      border-radius: 12px;
+      color: var(--ink-deep);
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Noto Serif SC', serif;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(201, 169, 110, 0.25);
+    }
+
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(201, 169, 110, 0.35);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-accent));
+    }
+
+    .btn-login:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(201, 169, 110, 0.2);
+    }
+
+    /* Error alert */
+    .alert-error {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      background: rgba(220, 80, 80, 0.1);
+      border: 1px solid rgba(220, 80, 80, 0.25);
+      border-radius: 10px;
+      color: #f0a0a0;
+      font-size: 0.875rem;
+    }
+
+    /* Footer */
+    .footer-text {
+      text-align: center;
+      margin-top: 32px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="noise"></div>
+
+  <div class="mountains">
+    <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+      <path d="M0,400 L0,280 Q120,200 240,260 Q360,180 480,220 Q600,140 720,200 Q840,120 960,180 Q1080,100 1200,160 Q1320,80 1440,140 L1440,400 Z" opacity="0.5"/>
+      <path d="M0,400 L0,320 Q180,260 360,300 Q540,240 720,280 Q900,220 1080,260 Q1260,200 1440,240 L1440,400 Z" opacity="0.8"/>
+    </svg>
+  </div>
+
+  <div class="login-container">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+      </div>
+      <h1>代账公司管理系统</h1>
+      <p>智慧财务 · 高效管理</p>
+    </div>
+
+    <div class="login-card">
+      {% if error %}
+      <div class="alert-error">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.75 4a.75.75 0 011.5 0v3a.75.75 0 01-1.5 0V5zm.75 6.25a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
+        <span>{{ error }}</span>
+      </div>
+      {% endif %}
+
+      <form action="{% url 'myadmin_login' %}" method="post">
+        {% csrf_token %}
+        <div class="form-field">
+          <label>账号</label>
+          <div class="input-wrap">
+            <input type="text" name="username" placeholder="请输入您的账号" value="{{ username|default:'' }}" autocomplete="username">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>密码</label>
+          <div class="input-wrap">
+            <input type="password" name="password" placeholder="请输入您的密码" autocomplete="current-password">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+        </div>
+        <button type="submit" class="btn-login">登 录</button>
+      </form>
+    </div>
+
+    <div class="footer-text">
+      <p>&copy; 2026 代账公司管理系统</p>
+    </div>
+  </div>
+</body>
+</html>

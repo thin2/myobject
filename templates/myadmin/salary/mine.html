@@ -1,0 +1,45 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>我的薪酬</h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li class="active">我的薪酬</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-success">
+        <div class="box-header with-border">
+          <h3 class="box-title">薪酬明细</h3>
+        </div>
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>月份</th>
+              <th>基本工资</th>
+              <th>绩效工资</th>
+              <th>总薪酬</th>
+              <th>备注</th>
+            </tr>
+            {% for vo in salarylist %}
+            <tr>
+              <td>{{ vo.month }}</td>
+              <td>{{ vo.base_salary }} 元</td>
+              <td>{{ vo.performance_salary }} 元</td>
+              <td><strong>{{ vo.total_salary }} 元</strong></td>
+              <td>{{ vo.remark|default:"-" }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="5" class="text-center">暂无薪酬记录</td></tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

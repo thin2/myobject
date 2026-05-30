@@ -1,0 +1,56 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>催收提醒 <small>逾期未缴客户</small></h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li><a href="{% url 'myadmin_fee_index' 1 %}">收费管理</a></li>
+    <li class="active">催收提醒</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-danger">
+        <div class="box-header with-border">
+          <h3 class="box-title"><i class="fa fa-bell"></i> 待催收列表（已逾期）</h3>
+        </div>
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>客户编号</th>
+              <th>企业名称</th>
+              <th>对接会计</th>
+              <th>应收日期</th>
+              <th>应收金额</th>
+              <th>逾期天数</th>
+              <th>操作</th>
+            </tr>
+            {% load myadmin_tags %}
+            {% for vo in feelist %}
+            <tr>
+              <td>{{ vo.client.client_no }}</td>
+              <td>{{ vo.client.name }}</td>
+              <td>{{ vo.client.accountant.first_name|default:"未分配" }}</td>
+              <td>{{ vo.due_date|date:"Y-m-d" }}</td>
+              <td>{{ vo.due_amount }} 元</td>
+              <td><span class="text-red">{{ vo.due_date|overdue_days }} 天</span></td>
+              <td>
+                {% if request.user.role != 'accountant' %}
+                <a href="{% url 'myadmin_fee_pay' vo.id %}" class="btn btn-primary btn-xs"><i class="fa fa-check"></i> 确认收款</a>
+                {% endif %}
+                <a href="{% url 'myadmin_client_detail' vo.client.id %}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> 查看客户</a>
+              </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="7" class="text-center text-green"><i class="fa fa-check-circle"></i> 暂无逾期记录</td></tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

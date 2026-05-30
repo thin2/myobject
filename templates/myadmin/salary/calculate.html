@@ -1,0 +1,38 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>薪酬核算</h1>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">选择核算月份</h3>
+        </div>
+        <form action="{% url 'myadmin_salary_calculate' %}" method="post">
+          {% csrf_token %}
+          <div class="box-body">
+            <p class="text-muted">系统将根据以下规则自动核算所有会计的月薪：</p>
+            <ul class="text-muted">
+              <li>基本工资 = 底薪3000 + 学历加成 + 证书加成 + 工龄×200</li>
+              <li>绩效工资 = 客户数×200 + 报税次数×50 + 开票次数×30</li>
+            </ul>
+            <hr>
+            <div class="form-group">
+              <label>核算月份 <span class="text-red">*</span></label>
+              <input type="month" name="month" class="form-control" required>
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-calculator"></i> 开始核算</button>
+            <a href="{% url 'myadmin_salary_index' 1 %}" class="btn btn-default">返 回</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

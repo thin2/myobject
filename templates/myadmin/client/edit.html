@@ -1,0 +1,130 @@
+{% extends 'myadmin/base.html' %}
+
+{% block main_body %}
+<section class="content-header">
+  <h1>客户管理 <small>编辑客户</small></h1>
+  <ol class="breadcrumb">
+    <li><a href="{% url 'myadmin_index' %}"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li><a href="{% url 'myadmin_client_index' 1 %}">客户管理</a></li>
+    <li class="active">编辑客户</li>
+  </ol>
+</section>
+
+<section class="content container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">编辑客户信息</h3>
+        </div>
+        <form action="{% url 'myadmin_client_update' client.id %}" method="post">
+          {% csrf_token %}
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>客户编号</label>
+                  <input type="text" class="form-control" value="{{ client.client_no }}" disabled>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>企业性质</label>
+                  <select name="nature" class="form-control">
+                    {% for val, label in nature_choices %}
+                    <option value="{{ val }}" {% if client.nature == val %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>企业名称 <span class="text-red">*</span></label>
+              <input type="text" name="name" class="form-control" value="{{ client.name }}" required>
+            </div>
+            <div class="form-group">
+              <label>经营范围</label>
+              <textarea name="business_scope" class="form-control" rows="2">{{ client.business_scope }}</textarea>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>法人代表</label>
+                  <input type="text" name="legal_person" class="form-control" value="{{ client.legal_person }}">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>联系人 <span class="text-red">*</span></label>
+                  <input type="text" name="contact_name" class="form-control" value="{{ client.contact_name }}" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>联系电话 <span class="text-red">*</span></label>
+                  <input type="text" name="contact_phone" class="form-control" value="{{ client.contact_phone }}" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>地址</label>
+                  <input type="text" name="address" class="form-control" value="{{ client.address }}">
+                </div>
+              </div>
+            </div>
+            <hr>
+            <h4>缴费信息</h4>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>缴费开始日期</label>
+                  <input type="date" name="fee_start_date" class="form-control" value="{{ client.fee_start_date|date:'Y-m-d' }}">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>缴费周期</label>
+                  <select name="fee_cycle" class="form-control">
+                    {% for val, label in cycle_choices %}
+                    <option value="{{ val }}" {% if client.fee_cycle == val %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>缴费金额（元）</label>
+                  <input type="number" name="fee_amount" class="form-control" step="0.01" value="{{ client.fee_amount }}">
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <label>对接会计</label>
+              <select name="accountant" class="form-control">
+                <option value="">--暂不分配--</option>
+                {% for acc in accountants %}
+                <option value="{{ acc.id }}" {% if client.accountant_id == acc.id %}selected{% endif %}>{{ acc.first_name }}（{{ acc.username }}）</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <label>状态</label>
+              <select name="status" class="form-control">
+                <option value="1" {% if client.status == 1 %}selected{% endif %}>正常</option>
+                <option value="0" {% if client.status == 0 %}selected{% endif %}>停用</option>
+              </select>
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">保 存</button>
+            <a href="{% url 'myadmin_client_index' 1 %}" class="btn btn-default">返 回</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
